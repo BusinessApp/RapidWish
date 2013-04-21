@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>listo sebas</h1>
+        <h1>listo jose</h1>
     </body>
 </html>
