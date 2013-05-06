@@ -61,5 +61,4 @@ public class LoginBean {
         FacesContext.getCurrentInstance().addMessage(null, msg);
         context.addCallbackParam("loggedIn", loggedIn);
     }
-
 }
