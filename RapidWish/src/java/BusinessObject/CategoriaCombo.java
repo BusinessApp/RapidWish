@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Entity
 @Table(name = "categoria_combo")
@@ -60,10 +60,10 @@ public class CategoriaCombo implements Serializable {
     private Date fechaCreacion;
     @Column(name = "estado")
     private Integer estado;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "categoriacomboidCategoriaCombo")
-    private Collection<ComboProducto> comboProductoCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "categoriaCombo")
     private Collection<ProductoHasCategoriaCombo> productoHasCategoriaComboCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "categoriacomboidCategoriaCombo")
+    private Collection<ComboProducto> comboProductoCollection;
 
     public CategoriaCombo() {
     }
@@ -121,21 +121,21 @@ public class CategoriaCombo implements Serializable {
     }
 
     @XmlTransient
-    public Collection<ComboProducto> getComboProductoCollection() {
-        return comboProductoCollection;
-    }
-
-    public void setComboProductoCollection(Collection<ComboProducto> comboProductoCollection) {
-        this.comboProductoCollection = comboProductoCollection;
-    }
-
-    @XmlTransient
     public Collection<ProductoHasCategoriaCombo> getProductoHasCategoriaComboCollection() {
         return productoHasCategoriaComboCollection;
     }
 
     public void setProductoHasCategoriaComboCollection(Collection<ProductoHasCategoriaCombo> productoHasCategoriaComboCollection) {
         this.productoHasCategoriaComboCollection = productoHasCategoriaComboCollection;
+    }
+
+    @XmlTransient
+    public Collection<ComboProducto> getComboProductoCollection() {
+        return comboProductoCollection;
+    }
+
+    public void setComboProductoCollection(Collection<ComboProducto> comboProductoCollection) {
+        this.comboProductoCollection = comboProductoCollection;
     }
 
     @Override

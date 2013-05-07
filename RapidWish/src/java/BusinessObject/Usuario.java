@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Entity
 @Table(name = "usuario")
@@ -70,12 +70,12 @@ public class Usuario implements Serializable {
     @Column(name = "fecha_creacion")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaCreacion;
-    @JoinColumn(name = "SUCURSAL_idSucursal", referencedColumnName = "idSucursal")
+    @JoinColumn(name = "sucursal_idSucursal", referencedColumnName = "idSucursal")
     @ManyToOne(optional = false)
-    private Sucursal sUCURSALidSucursal;
-    @JoinColumn(name = "ROL_idRol", referencedColumnName = "idRol")
+    private Sucursal sucursalidSucursal;
+    @JoinColumn(name = "rol_idRol", referencedColumnName = "idRol")
     @ManyToOne(optional = false)
-    private Rol rOLidRol;
+    private Rol rolidRol;
 
     public Usuario() {
     }
@@ -156,20 +156,20 @@ public class Usuario implements Serializable {
         this.fechaCreacion = fechaCreacion;
     }
 
-    public Sucursal getSUCURSALidSucursal() {
-        return sUCURSALidSucursal;
+    public Sucursal getSucursalidSucursal() {
+        return sucursalidSucursal;
     }
 
-    public void setSUCURSALidSucursal(Sucursal sUCURSALidSucursal) {
-        this.sUCURSALidSucursal = sUCURSALidSucursal;
+    public void setSucursalidSucursal(Sucursal sucursalidSucursal) {
+        this.sucursalidSucursal = sucursalidSucursal;
     }
 
-    public Rol getROLidRol() {
-        return rOLidRol;
+    public Rol getRolidRol() {
+        return rolidRol;
     }
 
-    public void setROLidRol(Rol rOLidRol) {
-        this.rOLidRol = rOLidRol;
+    public void setRolidRol(Rol rolidRol) {
+        this.rolidRol = rolidRol;
     }
 
     @Override

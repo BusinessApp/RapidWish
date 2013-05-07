@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Embeddable
 public class ComboProductoHasPedidoPK implements Serializable {

@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Embeddable
 public class ProductoHasComboProductoPK implements Serializable {
@@ -22,15 +22,15 @@ public class ProductoHasComboProductoPK implements Serializable {
     private int productoidProducto;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "COMBO_PRODUCTO_idCombo_Producto")
-    private int cOMBOPRODUCTOidComboProducto;
+    @Column(name = "combo_producto_idCombo_Producto")
+    private int comboproductoidComboProducto;
 
     public ProductoHasComboProductoPK() {
     }
 
-    public ProductoHasComboProductoPK(int productoidProducto, int cOMBOPRODUCTOidComboProducto) {
+    public ProductoHasComboProductoPK(int productoidProducto, int comboproductoidComboProducto) {
         this.productoidProducto = productoidProducto;
-        this.cOMBOPRODUCTOidComboProducto = cOMBOPRODUCTOidComboProducto;
+        this.comboproductoidComboProducto = comboproductoidComboProducto;
     }
 
     public int getProductoidProducto() {
@@ -41,19 +41,19 @@ public class ProductoHasComboProductoPK implements Serializable {
         this.productoidProducto = productoidProducto;
     }
 
-    public int getCOMBOPRODUCTOidComboProducto() {
-        return cOMBOPRODUCTOidComboProducto;
+    public int getComboproductoidComboProducto() {
+        return comboproductoidComboProducto;
     }
 
-    public void setCOMBOPRODUCTOidComboProducto(int cOMBOPRODUCTOidComboProducto) {
-        this.cOMBOPRODUCTOidComboProducto = cOMBOPRODUCTOidComboProducto;
+    public void setComboproductoidComboProducto(int comboproductoidComboProducto) {
+        this.comboproductoidComboProducto = comboproductoidComboProducto;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (int) productoidProducto;
-        hash += (int) cOMBOPRODUCTOidComboProducto;
+        hash += (int) comboproductoidComboProducto;
         return hash;
     }
 
@@ -67,7 +67,7 @@ public class ProductoHasComboProductoPK implements Serializable {
         if (this.productoidProducto != other.productoidProducto) {
             return false;
         }
-        if (this.cOMBOPRODUCTOidComboProducto != other.cOMBOPRODUCTOidComboProducto) {
+        if (this.comboproductoidComboProducto != other.comboproductoidComboProducto) {
             return false;
         }
         return true;
@@ -75,7 +75,7 @@ public class ProductoHasComboProductoPK implements Serializable {
 
     @Override
     public String toString() {
-        return "BusinessObject.ProductoHasComboProductoPK[ productoidProducto=" + productoidProducto + ", cOMBOPRODUCTOidComboProducto=" + cOMBOPRODUCTOidComboProducto + " ]";
+        return "BusinessObject.ProductoHasComboProductoPK[ productoidProducto=" + productoidProducto + ", comboproductoidComboProducto=" + comboproductoidComboProducto + " ]";
     }
     
 }

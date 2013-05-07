@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Entity
 @Table(name = "combo_producto_has_pedido")

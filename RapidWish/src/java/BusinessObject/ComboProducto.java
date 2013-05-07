@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Entity
 @Table(name = "combo_producto")

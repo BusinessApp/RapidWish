@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Entity
 @Table(name = "producto_has_combo_producto")
@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "ProductoHasComboProducto.findAll", query = "SELECT p FROM ProductoHasComboProducto p"),
     @NamedQuery(name = "ProductoHasComboProducto.findByProductoidProducto", query = "SELECT p FROM ProductoHasComboProducto p WHERE p.productoHasComboProductoPK.productoidProducto = :productoidProducto"),
-    @NamedQuery(name = "ProductoHasComboProducto.findByCOMBOPRODUCTOidComboProducto", query = "SELECT p FROM ProductoHasComboProducto p WHERE p.productoHasComboProductoPK.cOMBOPRODUCTOidComboProducto = :cOMBOPRODUCTOidComboProducto"),
+    @NamedQuery(name = "ProductoHasComboProducto.findByComboproductoidComboProducto", query = "SELECT p FROM ProductoHasComboProducto p WHERE p.productoHasComboProductoPK.comboproductoidComboProducto = :comboproductoidComboProducto"),
     @NamedQuery(name = "ProductoHasComboProducto.findByEstado", query = "SELECT p FROM ProductoHasComboProducto p WHERE p.estado = :estado"),
     @NamedQuery(name = "ProductoHasComboProducto.findByCantidad", query = "SELECT p FROM ProductoHasComboProducto p WHERE p.cantidad = :cantidad")})
 public class ProductoHasComboProducto implements Serializable {
@@ -43,7 +43,7 @@ public class ProductoHasComboProducto implements Serializable {
     @JoinColumn(name = "producto_idProducto", referencedColumnName = "idProducto", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Producto producto;
-    @JoinColumn(name = "COMBO_PRODUCTO_idCombo_Producto", referencedColumnName = "idCombo_Producto", insertable = false, updatable = false)
+    @JoinColumn(name = "combo_producto_idCombo_Producto", referencedColumnName = "idCombo_Producto", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private ComboProducto comboProducto;
 
@@ -59,8 +59,8 @@ public class ProductoHasComboProducto implements Serializable {
         this.estado = estado;
     }
 
-    public ProductoHasComboProducto(int productoidProducto, int cOMBOPRODUCTOidComboProducto) {
-        this.productoHasComboProductoPK = new ProductoHasComboProductoPK(productoidProducto, cOMBOPRODUCTOidComboProducto);
+    public ProductoHasComboProducto(int productoidProducto, int comboproductoidComboProducto) {
+        this.productoHasComboProductoPK = new ProductoHasComboProductoPK(productoidProducto, comboproductoidComboProducto);
     }
 
     public ProductoHasComboProductoPK getProductoHasComboProductoPK() {

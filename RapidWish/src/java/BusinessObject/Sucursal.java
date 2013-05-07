@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author ACER
+ * @author croa
  */
 @Entity
 @Table(name = "sucursal")
@@ -60,7 +60,7 @@ public class Sucursal implements Serializable {
     private Date fechaCreacion;
     @Column(name = "estado")
     private Integer estado;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "sUCURSALidSucursal")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "sucursalidSucursal")
     private Collection<Usuario> usuarioCollection;
 
     public Sucursal() {
