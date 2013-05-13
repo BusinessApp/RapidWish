@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package BusinessObject;
+package BusinessValueObject;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -105,7 +105,7 @@ public class ProductoHasCategoriaCombo implements Serializable {
 
     @Override
     public String toString() {
-        return "BusinessObject.ProductoHasCategoriaCombo[ productoHasCategoriaComboPK=" + productoHasCategoriaComboPK + " ]";
+        return "BusinessValueObject.ProductoHasCategoriaCombo[ productoHasCategoriaComboPK=" + productoHasCategoriaComboPK + " ]";
     }
     
 }

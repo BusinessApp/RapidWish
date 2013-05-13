@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package BusinessObject;
+package BusinessValueObject;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -160,7 +160,7 @@ public class CategoriaCombo implements Serializable {
 
     @Override
     public String toString() {
-        return "BusinessObject.CategoriaCombo[ idCategoriaCombo=" + idCategoriaCombo + " ]";
+        return "BusinessValueObject.CategoriaCombo[ idCategoriaCombo=" + idCategoriaCombo + " ]";
     }
     
 }

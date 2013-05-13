@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package BusinessObject;
+package BusinessValueObject;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -15,22 +15,22 @@ import javax.validation.constraints.NotNull;
  * @author ACER
  */
 @Embeddable
-public class ProductoHasComboProductoPK implements Serializable {
+public class ProductoHasCategoriaComboPK implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "producto_idProducto")
     private int productoidProducto;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "COMBO_PRODUCTO_idCombo_Producto")
-    private int cOMBOPRODUCTOidComboProducto;
+    @Column(name = "categoria_combo_idCategoria_Combo")
+    private int categoriacomboidCategoriaCombo;
 
-    public ProductoHasComboProductoPK() {
+    public ProductoHasCategoriaComboPK() {
     }
 
-    public ProductoHasComboProductoPK(int productoidProducto, int cOMBOPRODUCTOidComboProducto) {
+    public ProductoHasCategoriaComboPK(int productoidProducto, int categoriacomboidCategoriaCombo) {
         this.productoidProducto = productoidProducto;
-        this.cOMBOPRODUCTOidComboProducto = cOMBOPRODUCTOidComboProducto;
+        this.categoriacomboidCategoriaCombo = categoriacomboidCategoriaCombo;
     }
 
     public int getProductoidProducto() {
@@ -41,33 +41,33 @@ public class ProductoHasComboProductoPK implements Serializable {
         this.productoidProducto = productoidProducto;
     }
 
-    public int getCOMBOPRODUCTOidComboProducto() {
-        return cOMBOPRODUCTOidComboProducto;
+    public int getCategoriacomboidCategoriaCombo() {
+        return categoriacomboidCategoriaCombo;
     }
 
-    public void setCOMBOPRODUCTOidComboProducto(int cOMBOPRODUCTOidComboProducto) {
-        this.cOMBOPRODUCTOidComboProducto = cOMBOPRODUCTOidComboProducto;
+    public void setCategoriacomboidCategoriaCombo(int categoriacomboidCategoriaCombo) {
+        this.categoriacomboidCategoriaCombo = categoriacomboidCategoriaCombo;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (int) productoidProducto;
-        hash += (int) cOMBOPRODUCTOidComboProducto;
+        hash += (int) categoriacomboidCategoriaCombo;
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ProductoHasComboProductoPK)) {
+        if (!(object instanceof ProductoHasCategoriaComboPK)) {
             return false;
         }
-        ProductoHasComboProductoPK other = (ProductoHasComboProductoPK) object;
+        ProductoHasCategoriaComboPK other = (ProductoHasCategoriaComboPK) object;
         if (this.productoidProducto != other.productoidProducto) {
             return false;
         }
-        if (this.cOMBOPRODUCTOidComboProducto != other.cOMBOPRODUCTOidComboProducto) {
+        if (this.categoriacomboidCategoriaCombo != other.categoriacomboidCategoriaCombo) {
             return false;
         }
         return true;
@@ -75,7 +75,7 @@ public class ProductoHasComboProductoPK implements Serializable {
 
     @Override
     public String toString() {
-        return "BusinessObject.ProductoHasComboProductoPK[ productoidProducto=" + productoidProducto + ", cOMBOPRODUCTOidComboProducto=" + cOMBOPRODUCTOidComboProducto + " ]";
+        return "BusinessValueObject.ProductoHasCategoriaComboPK[ productoidProducto=" + productoidProducto + ", categoriacomboidCategoriaCombo=" + categoriacomboidCategoriaCombo + " ]";
     }
     
 }

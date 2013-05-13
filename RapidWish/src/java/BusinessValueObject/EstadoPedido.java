@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package BusinessObject;
+package BusinessValueObject;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -125,7 +125,7 @@ public class EstadoPedido implements Serializable {
 
     @Override
     public String toString() {
-        return "BusinessObject.EstadoPedido[ idEstadoPedido=" + idEstadoPedido + " ]";
+        return "BusinessValueObject.EstadoPedido[ idEstadoPedido=" + idEstadoPedido + " ]";
     }
     
 }
