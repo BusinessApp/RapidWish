@@ -33,12 +33,12 @@ public class ProductoHasCategoriaCombo implements Serializable {
     protected ProductoHasCategoriaComboPK productoHasCategoriaComboPK;
     @Column(name = "cantida_Permitida")
     private Integer cantidaPermitida;
-    @JoinColumn(name = "categoria_combo_idCategoria_Combo", referencedColumnName = "idCategoria_Combo", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
-    private CategoriaCombo categoriaCombo;
     @JoinColumn(name = "producto_idProducto", referencedColumnName = "idProducto", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Producto producto;
+    @JoinColumn(name = "categoria_combo_idCategoria_Combo", referencedColumnName = "idCategoria_Combo", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private CategoriaCombo categoriaCombo;
 
     public ProductoHasCategoriaCombo() {
     }
@@ -67,20 +67,20 @@ public class ProductoHasCategoriaCombo implements Serializable {
         this.cantidaPermitida = cantidaPermitida;
     }
 
-    public CategoriaCombo getCategoriaCombo() {
-        return categoriaCombo;
-    }
-
-    public void setCategoriaCombo(CategoriaCombo categoriaCombo) {
-        this.categoriaCombo = categoriaCombo;
-    }
-
     public Producto getProducto() {
         return producto;
     }
 
     public void setProducto(Producto producto) {
         this.producto = producto;
+    }
+
+    public CategoriaCombo getCategoriaCombo() {
+        return categoriaCombo;
+    }
+
+    public void setCategoriaCombo(CategoriaCombo categoriaCombo) {
+        this.categoriaCombo = categoriaCombo;
     }
 
     @Override

@@ -56,12 +56,12 @@ public class Pedido implements Serializable {
     private String codRadicacion;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pedido")
     private Collection<ComboProductoHasPedido> comboProductoHasPedidoCollection;
-    @JoinColumn(name = "cliente_idCliente", referencedColumnName = "idCliente")
-    @ManyToOne(optional = false)
-    private Cliente clienteidCliente;
     @JoinColumn(name = "estado_pedido_idEstado_Pedido", referencedColumnName = "idEstado_Pedido")
     @ManyToOne(optional = false)
     private EstadoPedido estadopedidoidEstadoPedido;
+    @JoinColumn(name = "cliente_idCliente", referencedColumnName = "idCliente")
+    @ManyToOne(optional = false)
+    private Cliente clienteidCliente;
 
     public Pedido() {
     }
@@ -108,20 +108,20 @@ public class Pedido implements Serializable {
         this.comboProductoHasPedidoCollection = comboProductoHasPedidoCollection;
     }
 
-    public Cliente getClienteidCliente() {
-        return clienteidCliente;
-    }
-
-    public void setClienteidCliente(Cliente clienteidCliente) {
-        this.clienteidCliente = clienteidCliente;
-    }
-
     public EstadoPedido getEstadopedidoidEstadoPedido() {
         return estadopedidoidEstadoPedido;
     }
 
     public void setEstadopedidoidEstadoPedido(EstadoPedido estadopedidoidEstadoPedido) {
         this.estadopedidoidEstadoPedido = estadopedidoidEstadoPedido;
+    }
+
+    public Cliente getClienteidCliente() {
+        return clienteidCliente;
+    }
+
+    public void setClienteidCliente(Cliente clienteidCliente) {
+        this.clienteidCliente = clienteidCliente;
     }
 
     @Override
