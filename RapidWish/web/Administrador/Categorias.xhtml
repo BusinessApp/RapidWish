@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Categorias</title>
+    </h:head>
+
+    <h:form id="form">  
+
+        <p:panel id="panel" header="Nueva categoria" style="margin-bottom:10px;">  
+               
+            <h:panelGrid columns="3">  
+                <h:outputLabel for="NombreCategoria" value="Nombre Categoria *" />  
+                <p:inputText id="NombreCategoria"   
+                             value="#{administradorBean.nombreCategoria}" required="true" label="Nombre Categoria">  
+                    <f:validateLength minimum="2" />  
+                </p:inputText>  
+                <p:message for="NombreCategoria" />  
+
+                <h:outputLabel for="Valor" value="Valor Combo: *" />  
+                <p:inputText id="Valor"   
+                             value="#{administradorBean.valorCombo}" required="true" label="Valor"/>  
+                <p:message for="Valor" />  
+            </h:panelGrid>  
+        </p:panel>  
+
+        <p:commandButton value="Ajax Submit" update="panel" actionListener="#{administradorBean.ingesarCategoria}"></p:commandButton>
+
+
+    </h:form>  
+
+
+</html>
+

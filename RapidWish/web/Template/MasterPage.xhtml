@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -16,10 +17,19 @@
 
         <div>
             <h:form>
-                <p:dock position="top">
-                    <p:menuitem value="Home" icon="/images/images.jpg"/>
-                    <p:menuitem value="music" icon="/images/images.jpg"/>
-                </p:dock>
+<p:dock position="top">  
+    <p:menuitem value="Home" icon="/images/images.jpg" url="#">
+    </p:menuitem>
+    <p:menuitem value="Categorias Productos" icon="/images/Categoria.jpg" url="#"/>  
+    <p:menuitem value="Productos" icon="/images/Products.jpg" url="#"/>  
+    <p:menuitem value="Email" icon="/images/images.jpg" url="#"/>  
+    <p:menuitem value="Portfolio" icon="/images/images.jpg" url="#"/>  
+    <p:menuitem value="Link" icon="/images/images.jpg" url="#"/> 
+    <p:menuitem value="RSS" icon="/images/images.jpg" url="#"/>  
+    <p:menuitem value="History" icon="/images/images.jpg" url="#"/>
+    
+</p:dock>  
+
             </h:form>
         </div>
 

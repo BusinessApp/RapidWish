@@ -72,6 +72,17 @@ public class CategoriaCombo implements Serializable {
         this.idCategoriaCombo = idCategoriaCombo;
     }
 
+    public CategoriaCombo(Integer idCategoriaCombo, String nombre, Float valorCombo, String imagen, Date fechaCreacion, Integer estado) {
+        this.idCategoriaCombo = idCategoriaCombo;
+        this.nombre = nombre;
+        this.valorCombo = valorCombo;
+        this.imagen = imagen;
+        this.fechaCreacion = fechaCreacion;
+        this.estado = estado;
+    }
+   
+    
+
     public Integer getIdCategoriaCombo() {
         return idCategoriaCombo;
     }
